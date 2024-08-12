@@ -24,8 +24,8 @@ function updateHistory(result) {
     const reportDetails = document.getElementById('report-details');
     
     if (reportDescription && reportDetails) {
-        reportDescription.textContent = `A rolagem mais recente foi uma vitória inesperada para o jogador!`;
-        reportDetails.textContent = `Hoje, durante a sessão de jogo, o jogador rolou um dado e obteve um resultado significativo que influenciou a história de forma importante.`;
+        reportDescription.textContent;
+        reportDetails.textContent;
     }
 }
 
