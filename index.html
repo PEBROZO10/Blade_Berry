@@ -3,46 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu RPG</title>
+    <title>Portal de RPG</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Meu Sistema de RPG</h1>
+        <h1>Portal de RPG</h1>
     </header>
     <main>
         <!-- Seção de Livros -->
         <section id="books-section">
             <h2>Livros</h2>
-            <form id="book-form">
-                <label for="book-title">Título do Livro:</label>
-                <input type="text" id="book-title" name="book-title" required>
-                
-                <label for="book-author">Autor:</label>
-                <input type="text" id="book-author" name="book-author" required>
-                
-                <button type="submit">Adicionar Livro</button>
-            </form>
-            <ul id="books-list"></ul>
-        </section>
-
-        <!-- Seção de Ficha de Personagem -->
-        <section id="character-creation">
-            <h2>Ficha de Personagem</h2>
-            <form id="character-form">
-                <label for="char-name">Nome:</label>
-                <input type="text" id="char-name" name="char-name" required>
-                
-                <label for="char-class">Classe:</label>
-                <select id="char-class" name="char-class">
-                    <option value="warrior">Guerreiro</option>
-                    <option value="mage">Mago</option>
-                    <option value="archer">Arqueiro</option>
-                </select>
-                
-                <button type="submit">Criar Personagem</button>
-            </form>
-            <div id="character-info"></div>
+            <ul id="books-list">
+                <li><a href="https://exemplo.com/livro1" target="_blank">Livro 1 - Detalhes</a></li>
+                <li><a href="https://exemplo.com/livro2" target="_blank">Livro 2 - Detalhes</a></li>
+                <li><a href="https://exemplo.com/livro3" target="_blank">Livro 3 - Detalhes</a></li>
+                <!-- Adicione mais livros aqui -->
+            </ul>
         </section>
 
         <!-- Seção de Rolagem de Dados -->
