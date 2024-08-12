@@ -12,6 +12,29 @@ header {
     text-align: center;
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background-color: #c73d3d; /* Vermelho não muito forte */
+    border-radius: 5px;
+}
+
 main {
     padding: 20px;
 }
@@ -71,10 +94,6 @@ button:hover {
     margin-top: 20px;
 }
 
-#dice-history h3 {
-    color: #4d0d0d; /* Bordô */
-}
-
 #history-list {
     margin: 0;
     padding: 0;
@@ -110,10 +129,4 @@ button:hover {
 #report-details {
     margin-top: 10px;
     color: #333; /* Texto padrão */
-}
-
-
-#dice-result {
-    font-weight: bold;
-    color: #4d0d0d; /* Bordô */
 }
