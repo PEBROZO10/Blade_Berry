@@ -30,8 +30,11 @@ function updateReport() {
     
     if (reportDescription && reportDetails) {
         // Atualizar a reportagem com as informações inseridas
-        reportDescription.textContent = `Última rolagem de dado: ${description}`;
-        reportDetails.textContent = `Detalhes: ${details}`;
+        document.getElementById('report-content').innerHTML = `
+            <h3>Última Rolagem</h3>
+            <p>${description}</p>
+            <p>${details}</p>
+        `;
     }
 }
 
