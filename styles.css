@@ -66,3 +66,54 @@ button:hover {
     font-weight: bold;
     color: #4d0d0d; /* Bordô */
 }
+
+#dice-history {
+    margin-top: 20px;
+}
+
+#dice-history h3 {
+    color: #4d0d0d; /* Bordô */
+}
+
+#history-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#history-list li {
+    margin: 5px 0;
+}
+
+#report-section {
+    margin-top: 40px;
+}
+
+#report-section h2 {
+    border-bottom: 2px solid #4d0d0d; /* Bordô */
+    padding-bottom: 10px;
+    color: #4d0d0d; /* Bordô */
+}
+
+#report-content {
+    background-color: #ffffff; /* Branco para contraste */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#report-description {
+    font-weight: bold;
+    color: #4d0d0d; /* Bordô */
+}
+
+#report-details {
+    margin-top: 10px;
+    color: #333; /* Texto padrão */
+}
+
+
+#dice-result {
+    font-weight: bold;
+    color: #4d0d0d; /* Bordô */
+}
