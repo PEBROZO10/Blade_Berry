@@ -1,7 +1,7 @@
 // Armazenar histórico de rolagens
 let history = [];
 
-// Atualizar histórico
+// Função para atualizar o histórico
 function updateHistory(result) {
     history.push(result);
     if (history.length > 3) {
@@ -24,8 +24,19 @@ function updateHistory(result) {
     const reportDetails = document.getElementById('report-details');
     
     if (reportDescription && reportDetails) {
-        reportDescription.textContent;
-        reportDetails.textContent;
+        reportDescription.textContent = `A rolagem mais recente foi uma vitória inesperada para o jogador!`;
+        reportDetails.textContent = `Hoje, durante a sessão de jogo, o jogador rolou um dado e obteve um resultado significativo que influenciou a história de forma importante.`;
+    }
+}
+
+// Função para exibir uma nova reportagem
+function updateReport(result, sides) {
+    const reportDescription = document.getElementById('report-description');
+    const reportDetails = document.getElementById('report-details');
+    
+    if (reportDescription && reportDetails) {
+        reportDescription.textContent = `Última rolagem de dado de ${sides} lados:`;
+        reportDetails.textContent = `O dado rolou ${result}. Este resultado teve um impacto significativo no jogo.`;
     }
 }
 
@@ -44,10 +55,12 @@ document.getElementById('dice-form')?.addEventListener('submit', function(event)
     
     document.getElementById('dice-result').textContent = `Resultado: ${result}`;
     updateHistory(result);
+    updateReport(result, sides);
     
     // Limpar o formulário
     this.reset();
 });
+
 
     
     // Limpar o formulário
