@@ -105,28 +105,35 @@ button:hover {
 }
 
 #report-section {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-#report-section h2 {
-    border-bottom: 2px solid #4d0d0d; /* Bordô */
-    padding-bottom: 10px;
+#report-section h3 {
     color: #4d0d0d; /* Bordô */
 }
 
-#report-content {
-    background-color: #ffffff; /* Branco para contraste */
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
+#report-description, #report-details {
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 #report-description {
-    font-weight: bold;
-    color: #4d0d0d; /* Bordô */
+    padding: 8px;
 }
 
 #report-details {
-    margin-top: 10px;
-    color: #333; /* Texto padrão */
+    padding: 8px;
+    resize: vertical;
+}
+
+#update-report {
+    background-color: #c73d3d; /* Vermelho não muito forte */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#update-report:hover {
+    background-color: #a52a2a; /* Tom mais escuro de vermelho */
 }
