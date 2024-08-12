@@ -18,25 +18,20 @@ function updateHistory(result) {
             historyList.appendChild(li);
         });
     }
-
-    // Atualizar a reportagem se estiver na página principal
-    const reportDescription = document.getElementById('report-description');
-    const reportDetails = document.getElementById('report-details');
-    
-    if (reportDescription && reportDetails) {
-        reportDescription.textContent = `A rolagem mais recente foi uma vitória inesperada para o jogador!`;
-        reportDetails.textContent = `Hoje, durante a sessão de jogo, o jogador rolou um dado e obteve um resultado significativo que influenciou a história de forma importante.`;
-    }
 }
 
-// Função para exibir uma nova reportagem
-function updateReport(result, sides) {
+// Função para atualizar a reportagem
+function updateReport() {
+    const description = document.getElementById('report-description').value;
+    const details = document.getElementById('report-details').value;
+
     const reportDescription = document.getElementById('report-description');
     const reportDetails = document.getElementById('report-details');
     
     if (reportDescription && reportDetails) {
-        reportDescription.textContent = `Última rolagem de dado de ${sides} lados:`;
-        reportDetails.textContent = `O dado rolou ${result}. Este resultado teve um impacto significativo no jogo.`;
+        // Atualizar a reportagem com as informações inseridas
+        reportDescription.textContent = `Última rolagem de dado: ${description}`;
+        reportDetails.textContent = `Detalhes: ${details}`;
     }
 }
 
@@ -55,10 +50,16 @@ document.getElementById('dice-form')?.addEventListener('submit', function(event)
     
     document.getElementById('dice-result').textContent = `Resultado: ${result}`;
     updateHistory(result);
-    updateReport(result, sides);
+    // Atualizar a reportagem com informações padrão, se necessário
+    updateReport();
     
     // Limpar o formulário
     this.reset();
+});
+
+// Atualizar a reportagem ao clicar no botão
+document.getElementById('update-report')?.addEventListener('click', function() {
+    updateReport();
 });
 
 
