@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Cinza claro */
 }
 
 header {
-    background-color: #4d0d0d; /* Bordo */
+    background-color: #4d0d0d; /* Bordô */
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -17,9 +17,9 @@ main {
 }
 
 h2 {
-    border-bottom: 2px solid #4d0d0d; /* Bordo */
+    border-bottom: 2px solid #4d0d0d; /* Bordô */
     padding-bottom: 10px;
-    color: #4d0d0d; /* Bordo */
+    color: #4d0d0d; /* Bordô */
 }
 
 ul {
@@ -64,11 +64,5 @@ button:hover {
 
 #dice-result {
     font-weight: bold;
-    color: #4d0d0d; /* Bordo */
-}
-
-}
-
-button:hover {
-    background-color: #218838;
+    color: #4d0d0d; /* Bordô */
 }
