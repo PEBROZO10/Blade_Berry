@@ -19,6 +19,7 @@ main {
 form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 label, input, select, button {
@@ -31,6 +32,21 @@ button {
     border: none;
     padding: 10px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
 }
 
 button:hover {
