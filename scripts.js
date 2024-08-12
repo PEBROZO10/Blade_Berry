@@ -9,24 +9,28 @@ function updateHistory(result) {
     }
 
     const historyList = document.getElementById('history-list');
-    historyList.innerHTML = ''; // Limpar a lista atual
+    if (historyList) {
+        historyList.innerHTML = ''; // Limpar a lista atual
 
-    history.forEach((item, index) => {
-        const li = document.createElement('li');
-        li.textContent = `Rolagem ${index + 1}: ${item}`;
-        historyList.appendChild(li);
-    });
+        history.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.textContent = `Rolagem ${index + 1}: ${item}`;
+            historyList.appendChild(li);
+        });
+    }
 
-    // Atualizar a reportagem
+    // Atualizar a reportagem se estiver na página principal
     const reportDescription = document.getElementById('report-description');
     const reportDetails = document.getElementById('report-details');
     
-    reportDescription.textContent = `A rolagem mais recente foi uma vitória inesperada para o jogador!`;
-    reportDetails.textContent = `Hoje, durante a sessão de jogo, o jogador rolou um dado de ${sides} lados e obteve um ${result}, garantindo uma ação crítica em sua missão. A rolagem foi crucial para o desenvolvimento da história e mostrou como a sorte pode mudar o curso de uma aventura.`;
+    if (reportDescription && reportDetails) {
+        reportDescription.textContent = `A rolagem mais recente foi uma vitória inesperada para o jogador!`;
+        reportDetails.textContent = `Hoje, durante a sessão de jogo, o jogador rolou um dado e obteve um resultado significativo que influenciou a história de forma importante.`;
+    }
 }
 
 // Rolagem de Dados
-document.getElementById('dice-form').addEventListener('submit', function(event) {
+document.getElementById('dice-form')?.addEventListener('submit', function(event) {
     event.preventDefault();
     
     const sides = parseInt(document.getElementById('dice-sides').value, 10);
@@ -40,6 +44,11 @@ document.getElementById('dice-form').addEventListener('submit', function(event) 
     
     document.getElementById('dice-result').textContent = `Resultado: ${result}`;
     updateHistory(result);
+    
+    // Limpar o formulário
+    this.reset();
+});
+
     
     // Limpar o formulário
     this.reset();
