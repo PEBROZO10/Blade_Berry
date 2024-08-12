@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu RPG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu RPG</h1>
+    </header>
+    <main>
+        <section id="character-creation">
+            <h2>Criação de Personagem</h2>
+            <form id="character-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="class">Classe:</label>
+                <select id="class" name="class">
+                    <option value="warrior">Guerreiro</option>
+                    <option value="mage">Mago</option>
+                    <option value="archer">Arqueiro</option>
+                </select>
+                
+                <button type="submit">Criar Personagem</button>
+            </form>
+        </section>
+        <section id="character-display">
+            <h2>Personagem</h2>
+            <div id="character-info"></div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
