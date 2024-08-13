@@ -45,6 +45,24 @@ h2 {
     color: #4d0d0d; /* Bordô */
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #c73d3d; /* Vermelho não muito forte */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -70,5 +88,52 @@ button:hover {
 #dice-result {
     font-weight: bold;
     color: #4d0d0d; /* Bordô */
+}
+
+#dice-history {
     margin-top: 20px;
+}
+
+#history-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#history-list li {
+    margin: 5px 0;
+}
+
+#report-section {
+    margin-top: 20px;
+}
+
+#report-section h3 {
+    color: #4d0d0d; /* Bordô */
+}
+
+#report-description, #report-details {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#report-description {
+    padding: 8px;
+}
+
+#report-details {
+    padding: 8px;
+    resize: vertical;
+}
+
+#update-report {
+    background-color: #c73d3d; /* Vermelho não muito forte */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#update-report:hover {
+    background-color: #a52a2a; /* Tom mais escuro de vermelho */
 }
