@@ -45,24 +45,30 @@ h2 {
     color: #4d0d0d; /* Bordô */
 }
 
-/* Estilos para a seção de notícias */
-#news-section {
-    margin-top: 20px;
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
-.news-container {
-    background-color: #fff; /* Fundo branco */
-    border: 1px solid #ccc; /* Borda cinza clara */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar destaque */
-}
-
-.news h3 {
-    color: #4d0d0d; /* Bordô */
+label, input, button {
     margin-bottom: 10px;
 }
 
-.news p {
-    color: #333; /* Texto em cinza escuro */
+button {
+    background-color: #c73d3d; /* Vermelho não muito forte */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a52a2a; /* Tom mais escuro de vermelho */
+}
+
+#dice-result {
+    font-weight: bold;
+    color: #4d0d0d; /* Bordô */
+    margin-top: 20px;
 }
