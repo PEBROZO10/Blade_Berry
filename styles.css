@@ -107,7 +107,12 @@ button:hover {
 #report-section {
     margin-top: 20px;
 }
-
+#report-content {
+    background-color: #ffffff; /* Branco para contraste */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
 #report-section h3 {
     color: #4d0d0d; /* Bordô */
 }
