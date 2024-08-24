@@ -25,7 +25,7 @@ const npcs = [
     "uma criatura mágica",
     "um Terralith",
     "um Verdeluz",
-    "ferreiro"
+    "um ferreiro"
 ];
 
 // Função para gerar elementos aleatórios
