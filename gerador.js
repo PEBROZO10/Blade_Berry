@@ -4,7 +4,8 @@ const ambientes = [
     "Cidade subterrânea", 
     "Templo antigo", 
     "Deserto infinito",
-    "Ruínas de uma civilização perdida"
+    "Ruínas de uma civilização perdida",
+    "Cidade Nova"
 ];
 
 const eventos = [
@@ -12,7 +13,9 @@ const eventos = [
     "uma cerimônia ritual", 
     "um ataque surpresa",
     "um terremoto",
-    "uma aparição espectral"
+    "uma aparição espectral",
+    "um Terralith",
+    "um Verdeluz"
 ];
 
 const npcs = [
@@ -20,7 +23,8 @@ const npcs = [
     "um mercador misterioso", 
     "um grupo de bandidos",
     "um aventureiro perdido",
-    "uma criatura mágica"
+    "uma criatura mágica",
+    "ferreiro"
 ];
 
 // Função para gerar elementos aleatórios
@@ -29,7 +33,7 @@ function gerarCenario() {
     const evento = eventos[Math.floor(Math.random() * eventos.length)];
     const npc = npcs[Math.floor(Math.random() * npcs.length)];
 
-    return `Você está em ${ambiente}, onde ocorre ${evento}. Você encontra ${npc}.`;
+    return `Você está em ${ambiente}, onde ocorre ${evento}. E aí você encontra ${npc}.`;
 }
 
 // Manipulador do botão de geração
