@@ -14,8 +14,7 @@ const eventos = [
     "um ataque surpresa",
     "um terremoto",
     "uma aparição espectral",
-    "um Terralith",
-    "um Verdeluz"
+
 ];
 
 const npcs = [
@@ -24,6 +23,8 @@ const npcs = [
     "um grupo de bandidos",
     "um aventureiro perdido",
     "uma criatura mágica",
+    "um Terralith",
+    "um Verdeluz",
     "ferreiro"
 ];
 
