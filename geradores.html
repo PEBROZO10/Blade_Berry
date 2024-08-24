@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Cenários</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geradores</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Assumindo que você já tem um arquivo CSS -->
+    <style>
+        /* Adicionando espaçamento nas laterais para o conteúdo */
+        body {
+            margin: 0; /* Remove margens padrão */
+            padding: 20px; /* Adiciona espaçamento de 20px em todos os lados */
+            box-sizing: border-box; /* Inclui o padding dentro da largura e altura */
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Blade and Berry</h1>
         <nav>
             <ul>
-        <main>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="historico.html">Updates e Rolar Dados</a></li>
                 <li><a href="geradores.html">Geradores</a></li>
             </ul>
         </nav>
     </header>
-    <button id="gerar">Gerar Cenário</button>
-    <div id="resultado"></div>
+    <main>
+        <button id="gerar">Gerar Cenário</button>
+        <div id="resultado"></div>
+    </main>
+
+    <script src="gerador.js"></script>
+</body>
+</html>
 
     <script src="gerador.js"></script>
     </main>
