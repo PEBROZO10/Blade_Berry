@@ -14,7 +14,6 @@ const eventos = [
     "um ataque surpresa",
     "um terremoto",
     "uma aparição espectral",
-
 ];
 
 const npcs = [
@@ -42,7 +41,8 @@ document.getElementById('gerarc').addEventListener('click', function() {
     const resultadoc = gerarCenario();
     document.getElementById('resultadoc').innerText = resultadoc;
 });
-const classe = [
+
+const classes = [
     "arqueiro",
     "bardo",
     "clérigo",
@@ -55,11 +55,11 @@ const classe = [
     "caçador",
     "artífice",
     "necromante",
-    "bardo",
     "geomante",
     "sonhador"
 ];
-const raca = [
+
+const racas = [
     "tabaxi",
     "anão",
     "terralith",
@@ -70,13 +70,14 @@ const raca = [
 
 // Função para gerar elementos aleatórios
 function gerarPersonagem() {
-    const ambiente = classe[Math.floor(Math.random() * classe.length)];
-    const evento = eventos[Math.floor(Math.random() * eventos.length)];
+    const classe = classes[Math.floor(Math.random() * classes.length)];
+    const raca = racas[Math.floor(Math.random() * racas.length)];
 
-    return `Você avista um ${classe}, onde ocorre ${raca}`;
+    return `Você avista um ${raca} ${classe}.`;
 }
 
 // Manipulador do botão de geração
 document.getElementById('gerarp').addEventListener('click', function() {
     const resultadop = gerarPersonagem();
     document.getElementById('resultadop').innerText = resultadop;
+});
