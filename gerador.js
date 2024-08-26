@@ -38,7 +38,45 @@ function gerarCenario() {
 }
 
 // Manipulador do botão de geração
-document.getElementById('gerar').addEventListener('click', function() {
-    const resultado = gerarCenario();
-    document.getElementById('resultado').innerText = resultado;
+document.getElementById('gerarc').addEventListener('click', function() {
+    const resultadoc = gerarCenario();
+    document.getElementById('resultadoc').innerText = resultadoc;
 });
+const classe = [
+    "arqueiro",
+    "bardo",
+    "clérigo",
+    "ladino",
+    "paladino",
+    "bárbaro",
+    "druida",
+    "feiticeiro",
+    "monge",
+    "caçador",
+    "artífice",
+    "necromante",
+    "bardo",
+    "geomante",
+    "sonhador"
+];
+const raca = [
+    "tabaxi",
+    "anão",
+    "terralith",
+    "troll",
+    "verdeluz",
+    "elfo"
+];
+
+// Função para gerar elementos aleatórios
+function gerarPersonagem() {
+    const ambiente = classe[Math.floor(Math.random() * classe.length)];
+    const evento = eventos[Math.floor(Math.random() * eventos.length)];
+
+    return `Você avista um ${classe}, onde ocorre ${raca}`;
+}
+
+// Manipulador do botão de geração
+document.getElementById('gerarp').addEventListener('click', function() {
+    const resultadop = gerarPersonagem();
+    document.getElementById('resultadop').innerText = resultadop;
