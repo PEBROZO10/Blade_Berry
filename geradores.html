@@ -18,13 +18,34 @@
         </nav>
     </header>
     <main>
-        <button id="gerarc">Gerar Cenário</button>
-        <div id="resultadoc"></div>
-    </main>
-    <main>
-        <button id="gerarp">Gerar Personagem</button>
-        <div id="resultadop"></div>
-    </main>
-    <script src="gerador.js"></script>
+// Importa a biblioteca jsPDF
+const { jsPDF } = window.jspdf;
+
+// Função para gerar o PDF
+function gerarPDF() {
+    const doc = new jsPDF();
+
+    // Adiciona o título
+    doc.setFontSize(18);
+    doc.text("Ficha de Personagem - Blade and Berry", 10, 10);
+
+    // Exemplo de conteúdo da ficha
+    doc.setFontSize(12);
+    doc.text(`Nome: ${nomeDoPersonagem}`, 10, 30);
+    doc.text(`Raça: ${racaSelecionada}`, 10, 40);
+    doc.text(`Classe: ${classeSelecionada}`, 10, 50);
+    doc.text(`Atributos:`, 10, 60);
+    doc.text(`- Força: ${forca}`, 10, 70);
+    doc.text(`- Destreza: ${destreza}`, 10, 80);
+    doc.text(`- Constituição: ${constituicao}`, 10, 90);
+    doc.text(`- Inteligência: ${inteligencia}`, 10, 100);
+    doc.text(`- Sabedoria: ${sabedoria}`, 10, 110);
+    doc.text(`- Carisma: ${carisma}`, 10, 120);
+    doc.text(`História de Fundo: ${historiaDeFundo}`, 10, 140, { maxWidth: 180 });
+
+    // Salva o PDF com o nome especificado
+    doc.save("Ficha_de_Personagem_Blade_and_Berry.pdf");
+}
+
 </body>
 </html>
