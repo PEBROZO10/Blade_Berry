@@ -20,44 +20,52 @@
         </nav>
     </header>
     <main>
-        <!-- Conteúdo principal do site -->
-        <button onclick="gerarPDF()">Gerar Ficha PDF</button>
+<section id="dlcs">
+            <h2>DLCs Oficiais</h2>
+            <div class="dlc-item">
+                <h3>Nome da DLC 1</h3>
+                <img src="images/dlc1.jpg" alt="Imagem da DLC 1">
+                <p>Descrição breve da DLC. O que ela adiciona ao jogo: novas aventuras, raças ou mecânicas.</p>
+                <button>Comprar/Download</button>
+            </div>
+
+            <div class="dlc-item">
+                <h3>Nome da DLC 2</h3>
+                <img src="images/dlc2.jpg" alt="Imagem da DLC 2">
+                <p>Descrição breve da DLC. Detalhes do novo conteúdo e funcionalidades.</p>
+                <button>Comprar/Download</button>
+            </div>
+        </section>
+
+        <!-- Seção de Mods da Comunidade -->
+        <section id="mods">
+            <h2>Mods da Comunidade</h2>
+            <div class="mod-item">
+                <h3>Nome do Mod 1</h3>
+                <img src="images/mod1.jpg" alt="Imagem do Mod 1">
+                <p>Descrição do mod e como ele melhora ou altera a experiência de jogo.</p>
+                <button>Download</button>
+            </div>
+
+            <div class="mod-item">
+                <h3>Nome do Mod 2</h3>
+                <img src="images/mod2.jpg" alt="Imagem do Mod 2">
+                <p>Explicação breve do mod e por que ele é popular na comunidade.</p>
+                <button>Download</button>
+            </div>
+        </section>
+
+        <!-- Guias e Instruções -->
+        <section id="install-guides">
+            <h2>Guias de Instalação</h2>
+            <p>Aprenda como instalar mods e DLCs no *Blade and Berry*:</p>
+            <ol>
+                <li>Baixe o arquivo da DLC ou Mod.</li>
+                <li>Extraia o conteúdo (se necessário) na pasta de mods do jogo.</li>
+                <li>Certifique-se de seguir as instruções específicas fornecidas pelo criador.</li>
+            </ol>
+        </section>
     </main>
-
-    <!-- Código JavaScript -->
-    <script>
-        const { jsPDF } = window.jspdf;
-
-        function gerarPDF() {
-            const doc = new jsPDF();
-
-            // Adiciona o título
-            doc.setFontSize(18);
-            doc.text("Ficha de Personagem - Blade and Berry", 10, 10);
-
-            // Exemplo de conteúdo da ficha
-            doc.setFontSize(12);
-            const nomeDoPersonagem = "Nome Exemplo"; // Exemplo de dados
-            const racaSelecionada = "Elfo";
-            const classeSelecionada = "Bárbaro";
-            const forca = 10, destreza = 12, constituicao = 14, inteligencia = 8, sabedoria = 13, carisma = 15;
-            const historiaDeFundo = "História do personagem...";
-
-            doc.text(`Nome: ${nomeDoPersonagem}`, 10, 30);
-            doc.text(`Raça: ${racaSelecionada}`, 10, 40);
-            doc.text(`Classe: ${classeSelecionada}`, 10, 50);
-            doc.text(`Atributos:`, 10, 60);
-            doc.text(`- Força: ${forca}`, 10, 70);
-            doc.text(`- Destreza: ${destreza}`, 10, 80);
-            doc.text(`- Constituição: ${constituicao}`, 10, 90);
-            doc.text(`- Inteligência: ${inteligencia}`, 10, 100);
-            doc.text(`- Sabedoria: ${sabedoria}`, 10, 110);
-            doc.text(`- Carisma: ${carisma}`, 10, 120);
-            doc.text(`História de Fundo: ${historiaDeFundo}`, 10, 140, { maxWidth: 180 });
-
-            // Salva o PDF com o nome especificado
-            doc.save("Ficha_de_Personagem_Blade_and_Berry.pdf");
-        }
     </script>
 </body>
 </html>
