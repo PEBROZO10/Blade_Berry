@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador - Blade and Berry</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Inclua jsPDF da CDN ou local -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <header>
@@ -18,33 +20,44 @@
         </nav>
     </header>
     <main>
-
-const { jsPDF } = window.jspdf;
-
-function gerarPDF() {
-    const doc = new jsPDF();
-
-    // Adiciona o título
-    doc.setFontSize(18);
-    doc.text("Ficha de Personagem - Blade and Berry", 10, 10);
-
-    // Exemplo de conteúdo da ficha
-    doc.setFontSize(12);
-    doc.text(`Nome: ${nomeDoPersonagem}`, 10, 30);
-    doc.text(`Raça: ${racaSelecionada}`, 10, 40);
-    doc.text(`Classe: ${classeSelecionada}`, 10, 50);
-    doc.text(`Atributos:`, 10, 60);
-    doc.text(`- Força: ${forca}`, 10, 70);
-    doc.text(`- Destreza: ${destreza}`, 10, 80);
-    doc.text(`- Constituição: ${constituicao}`, 10, 90);
-    doc.text(`- Inteligência: ${inteligencia}`, 10, 100);
-    doc.text(`- Sabedoria: ${sabedoria}`, 10, 110);
-    doc.text(`- Carisma: ${carisma}`, 10, 120);
-    doc.text(`História de Fundo: ${historiaDeFundo}`, 10, 140, { maxWidth: 180 });
-
-    // Salva o PDF com o nome especificado
-    doc.save("Ficha_de_Personagem_Blade_and_Berry.pdf");
-}
+        <!-- Conteúdo principal do site -->
+        <button onclick="gerarPDF()">Gerar Ficha PDF</button>
     </main>
+
+    <!-- Código JavaScript -->
+    <script>
+        const { jsPDF } = window.jspdf;
+
+        function gerarPDF() {
+            const doc = new jsPDF();
+
+            // Adiciona o título
+            doc.setFontSize(18);
+            doc.text("Ficha de Personagem - Blade and Berry", 10, 10);
+
+            // Exemplo de conteúdo da ficha
+            doc.setFontSize(12);
+            const nomeDoPersonagem = "Nome Exemplo"; // Exemplo de dados
+            const racaSelecionada = "Elfo";
+            const classeSelecionada = "Bárbaro";
+            const forca = 10, destreza = 12, constituicao = 14, inteligencia = 8, sabedoria = 13, carisma = 15;
+            const historiaDeFundo = "História do personagem...";
+
+            doc.text(`Nome: ${nomeDoPersonagem}`, 10, 30);
+            doc.text(`Raça: ${racaSelecionada}`, 10, 40);
+            doc.text(`Classe: ${classeSelecionada}`, 10, 50);
+            doc.text(`Atributos:`, 10, 60);
+            doc.text(`- Força: ${forca}`, 10, 70);
+            doc.text(`- Destreza: ${destreza}`, 10, 80);
+            doc.text(`- Constituição: ${constituicao}`, 10, 90);
+            doc.text(`- Inteligência: ${inteligencia}`, 10, 100);
+            doc.text(`- Sabedoria: ${sabedoria}`, 10, 110);
+            doc.text(`- Carisma: ${carisma}`, 10, 120);
+            doc.text(`História de Fundo: ${historiaDeFundo}`, 10, 140, { maxWidth: 180 });
+
+            // Salva o PDF com o nome especificado
+            doc.save("Ficha_de_Personagem_Blade_and_Berry.pdf");
+        }
+    </script>
 </body>
 </html>
