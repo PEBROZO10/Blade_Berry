@@ -18,10 +18,9 @@
         </nav>
     </header>
     <main>
-// Importa a biblioteca jsPDF
+
 const { jsPDF } = window.jspdf;
 
-// Função para gerar o PDF
 function gerarPDF() {
     const doc = new jsPDF();
 
@@ -46,6 +45,6 @@ function gerarPDF() {
     // Salva o PDF com o nome especificado
     doc.save("Ficha_de_Personagem_Blade_and_Berry.pdf");
 }
-
+    </main>
 </body>
 </html>
