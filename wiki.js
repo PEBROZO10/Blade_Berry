@@ -1,16 +1,16 @@
 const data = {
     "palavras": {
-        "gato": {
-            "resposta": "Um gato é um animal de estimação adorável!",
-            "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUp29fRtslU9BJaQ-zyEZlYSszdmplqIc4g&s"
+        "Gato sem Botas": {
+            "resposta": "O Bato sem Botas é o maior Rei de Blade and Berry, governando o Reino de San Lourenzo. Ele é um Tabaxi ",
+            "imagem": "-"
         },
-        "cachorro": {
+        "-": {
             "resposta": "Um cachorro é um companheiro leal!",
-            "imagem": "url_da_imagem_do_cachorro.jpg"
+            "imagem": "-"
         },
-        "pássaro": {
+        "-": {
             "resposta": "Pássaros são lindos e podem voar alto!",
-            "imagem": "url_da_imagem_do_passaro.jpg"
+            "imagem": "-"
         }
     }
 };
