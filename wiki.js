@@ -4,13 +4,13 @@ const data = {
             "resposta": "O Bato sem Botas é o maior Rei de Blade and Berry, governando o Reino de San Lourenzo. Ele é um Tabaxi ",
             "imagem": "-"
         },
-        "-": {
-            "resposta": "Um cachorro é um companheiro leal!",
-            "imagem": "-"
+        "x": {
+            "resposta": "Um cachorro ",
+            "imagem": ".jpg"
         },
-        "-": {
-            "resposta": "Pássaros são lindos e podem voar alto!",
-            "imagem": "-"
+        "zz": {
+            "resposta": "Pássaros",
+            "imagem": ".jpg"
         }
     }
 };
