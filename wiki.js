@@ -4,12 +4,13 @@ const data = {
             "resposta": "O Gato sem Botas é o maior Rei de Blade and Berry, governando o Reino de San Lourenzo. Ele é um Tabaxi ",
             "imagem": "img1.jpg"
         },
-        "x": {
-            "resposta": "Um cachorro ",
+        "Carne": {
+            "resposta": "O Carne é o Carne.
+.. E testador Beta do B&B",
             "imagem": "img2.jpg"
         },
-        "zz": {
-            "resposta": "Pássaros",
+        "Andre": {
+            "resposta": "André é o dono do servidor RPG 123 e um Mestre de Rpg focado em Dungeons and Dragons, e agora Mestre Beta do B&B",
             "imagem": "img22.jpg"
         }
     }
