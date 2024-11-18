@@ -2,15 +2,15 @@ const data = {
     "palavras": {
         "Gato sem Botas": {
             "resposta": "O Bato sem Botas é o maior Rei de Blade and Berry, governando o Reino de San Lourenzo. Ele é um Tabaxi ",
-            "imagem": "-"
+            "imagem": "img1.jpg"
         },
         "x": {
             "resposta": "Um cachorro ",
-            "imagem": ".jpg"
+            "imagem": "img2.jpg"
         },
         "zz": {
             "resposta": "Pássaros",
-            "imagem": ".jpg"
+            "imagem": "img22.jpg"
         }
     }
 };
