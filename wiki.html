@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blade and Berry - Wiki</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="wiki.js" defer></script>
+
+    <style>
+
+        .container {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #imagem {
+            margin-top: 20px;
+            display: none;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blade and Berry</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="historico.html">Updates e Rolar Dados</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="wiki.html">Wiki</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Wiki-Blade and Berry</h2>
+        <input type="text" id="inputBox" placeholder="Pesquise...">
+        <button type="button" onclick="mostrarResposta()">Buscar</button>
+        
+        <img id="imagem" src="" alt="" style="display:none;">
+        <p id="resposta"></p>
+    </div>
+</body>
+</html>
