@@ -1,83 +1,60 @@
-// Arrays com diferentes opções
-const ambientes = [
-    "Floresta sombria", 
-    "Cidade subterrânea", 
-    "Templo antigo", 
-    "Deserto infinito",
-    "Ruínas de uma civilização perdida",
-    "Cidade Nova"
-];
+const data = {
+    "palavras": {
+        "gato": {
+            "resposta": "Um gato é um animal de estimação adorável!",
+            "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUp29fRtslU9BJaQ-zyEZlYSszdmplqIc4g&s"
+        },
+        "cachorro": {
+            "resposta": "Um cachorro é um companheiro leal!",
+            "imagem": "url_da_imagem_do_cachorro.jpg"
+        },
+        "pássaro": {
+            "resposta": "Pássaros são lindos e podem voar alto!",
+            "imagem": "url_da_imagem_do_passaro.jpg"
+        }
+    }
+};
 
-const eventos = [
-    "uma tempestade repentina", 
-    "uma cerimônia ritual", 
-    "um ataque surpresa",
-    "um terremoto",
-    "uma aparição espectral",
-];
+function calcularSimilaridade(str1, str2) {
+    let iguais = 0;
+    const comprimento = Math.max(str1.length, str2.length);
 
-const npcs = [
-    "um velho sábio", 
-    "um mercador misterioso", 
-    "um grupo de bandidos",
-    "um aventureiro perdido",
-    "uma criatura mágica",
-    "um Terralith",
-    "um Verdeluz",
-    "um ferreiro"
-];
+    for (let i = 0; i < comprimento; i++) {
+        if (str1[i] === str2[i]) {
+            iguais++;
+        }
+    }
 
-// Função para gerar elementos aleatórios
-function gerarCenario() {
-    const ambiente = ambientes[Math.floor(Math.random() * ambientes.length)];
-    const evento = eventos[Math.floor(Math.random() * eventos.length)];
-    const npc = npcs[Math.floor(Math.random() * npcs.length)];
-
-    return `Você está em ${ambiente}, onde ocorre ${evento}. E aí você encontra ${npc}.`;
+    return iguais / comprimento;
 }
 
-// Manipulador do botão de geração
-document.getElementById('gerarc').addEventListener('click', function() {
-    const resultadoc = gerarCenario();
-    document.getElementById('resultadoc').innerText = resultadoc;
-});
+function encontrarPalavraSemelhante(input) {
+    let melhorSimilaridade = 0;
+    let melhorPalavra = null;
 
-const classes = [
-    "arqueiro",
-    "bardo",
-    "clérigo",
-    "ladino",
-    "paladino",
-    "bárbaro",
-    "druida",
-    "feiticeiro",
-    "monge",
-    "caçador",
-    "artífice",
-    "necromante",
-    "geomante",
-    "sonhador"
-];
+    for (const palavra in data.palavras) {
+        const similaridade = calcularSimilaridade(input, palavra);
+        if (similaridade > melhorSimilaridade) {
+            melhorSimilaridade = similaridade;
+            melhorPalavra = palavra;
+        }
+    }
 
-const racas = [
-    "tabaxi",
-    "anão",
-    "terralith",
-    "troll",
-    "verdeluz",
-    "elfo"
-];
-
-// Função para gerar elementos aleatórios
-function gerarPersonagem() {
-    const classe = classes[Math.floor(Math.random() * classes.length)];
-    const raca = racas[Math.floor(Math.random() * racas.length)];
-
-    return `Você avista um ${raca} ${classe}.`;
+    return melhorPalavra;
 }
 
-// Manipulador do botão de geração
-document.getElementById('gerarp').addEventListener('click', function() {
-    const resultadop = gerarPersonagem();
-    document.getElementById('resultadop').innerText = resultadop;
-});
+function mostrarResposta() {
+    const input = document.getElementById("inputBox").value.toLowerCase();
+    let palavra = data.palavras[input] ? input : encontrarPalavraSemelhante(input);
+
+    if (palavra) {
+        document.getElementById("resposta").textContent = data.palavras[palavra].resposta;
+        const imagemUrl = data.palavras[palavra].imagem;
+        const imagemElement = document.getElementById("imagem");
+        imagemElement.src = imagemUrl;
+        imagemElement.style.display = "block";
+    } else {
+        document.getElementById("resposta").textContent = "Palavra-chave não encontrada.";
+        document.getElementById("imagem").style.display = "none";
+    }
+}
