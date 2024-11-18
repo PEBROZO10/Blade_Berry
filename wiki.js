@@ -1,7 +1,7 @@
 const data = {
     "palavras": {
         "Gato sem Botas": {
-            "resposta": "O Bato sem Botas é o maior Rei de Blade and Berry, governando o Reino de San Lourenzo. Ele é um Tabaxi ",
+            "resposta": "O Gato sem Botas é o maior Rei de Blade and Berry, governando o Reino de San Lourenzo. Ele é um Tabaxi ",
             "imagem": "img1.jpg"
         },
         "x": {
