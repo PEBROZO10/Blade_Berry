@@ -5,8 +5,7 @@ const data = {
             "imagem": "img1.jpg"
         },
         "Carne": {
-            "resposta": "O Carne é o Carne.
-.. E testador Beta do B&B",
+            "resposta": "O Carne é o Carne... E testador Beta do B&B",
             "imagem": "img2.jpg"
         },
         "Andre": {
