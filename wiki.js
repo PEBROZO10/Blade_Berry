@@ -8,6 +8,17 @@ const data = {
             "resposta": "O Carne é o Carne... E testador Beta do B&B",
             "imagem": "img2.jpg"
         },
+        "Alguem": {
+            "resposta": "Alguem é um testador Beta do B&B",
+            "imagem": "img2.jpg"
+        },
+        "Tarcisio": {
+            "resposta": "A deixe.....",
+            "imagem": "img2.jpg"
+        },
+        "Henry": {
+            "resposta": "Um louco legal, e também umtestador Beta do B&B",
+            "imagem": "img2.jpg"
         "Andre": {
             "resposta": "André é o dono do servidor RPG 123 e um Mestre de Rpg focado em Dungeons and Dragons, e agora Mestre Beta do B&B",
             "imagem": "img22.jpg"
