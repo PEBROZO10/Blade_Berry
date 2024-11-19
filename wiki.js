@@ -17,7 +17,7 @@ const data = {
             "imagem": "img2.jpg"
         },
         "Henry": {
-            "resposta": "Um louco legal, e também umtestador Beta do B&B",
+            "resposta": "Um louco legal, e também um testador Beta do B&B",
             "imagem": "img2.jpg"
             },
         "Andre": {
