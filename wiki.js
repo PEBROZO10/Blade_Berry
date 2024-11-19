@@ -19,6 +19,7 @@ const data = {
         "Henry": {
             "resposta": "Um louco legal, e também umtestador Beta do B&B",
             "imagem": "img2.jpg"
+            },
         "Andre": {
             "resposta": "André é o dono do servidor RPG 123 e um Mestre de Rpg focado em Dungeons and Dragons, e agora Mestre Beta do B&B",
             "imagem": "img22.jpg"
